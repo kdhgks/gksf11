@@ -1,9 +1,39 @@
-# .gitignore
-venv/
+# Python 기본
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+
+# 가상환경 (실제 폴더 이름으로 수정 필요)
+venv/
+env/
+.venv/
+
+# Django DB 및 설정 파일
 db.sqlite3
-.env
-*.log
-*.pem
 *.sqlite3
+*.log
+.env
+*.pem
+
+# VSCode, PyCharm 등 IDE 관련
+.vscode/
+.idea/
+
+# 운영체제에서 생성하는 파일
+.DS_Store
+Thumbs.db
+
+# pip freeze 결과 (의도적 관리 제외 시)
+Pipfile
+Pipfile.lock
+
+# static/media 업로드 파일 (개발용에서만)
+staticfiles/
+media/
+
+# migrations 캐시 파일 (필요 시만 커밋)
+*/migrations/__pycache__/
+*.pyc
