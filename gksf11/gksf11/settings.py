@@ -54,6 +54,10 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True  # 개발용
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://18.225.195.253.sslip.io",
+]
+
 ROOT_URLCONF = "gksf11.urls"
 
 TEMPLATES = [
