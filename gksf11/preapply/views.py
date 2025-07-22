@@ -28,5 +28,4 @@ def application_api(request):
         except json.JSONDecodeError:
             return JsonResponse({'error': 'JSON 형식 오류'}, status=400)
 
-    # POST가 아닌 다른 요청이면 405 오류 반환
     return JsonResponse({'error': '허용되지 않은 요청 방식입니다.'}, status=405)
