@@ -26,10 +26,9 @@ SECRET_KEY = "django-insecure-q*@mzwl46h8i@p7y0q)b71ik2%4xwjht)%kou11&jteng2ldhw
 
 DEBUG = False
 SECURE_SSL_REDIRECT = False   # (리다이렉트는 Nginx에서 처리)
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
 ALLOWED_HOSTS = ['api.gksf11.com']
-
 
 # Application definition
 INSTALLED_APPS = [
