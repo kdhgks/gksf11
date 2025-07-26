@@ -23,15 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-q*@mzwl46h8i@p7y0q)b71ik2%4xwjht)%kou11&jteng2ldhw"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # 배포 시 False로 변경 추천
+DEBUG = False  # 배포 시 False로 변경 추천
 
-ALLOWED_HOSTS = [
-    '18.225.195.253',          # EC2 퍼블릭 IP
-    '3.141.51.223',
-    '127.0.0.1',               # 로컬
-    '18.225.195.253.sslip.io', # 임시 도메인
-    'api.gksf11.com'           # 실제 도메인
-]
+SECURE_SSL_REDIRECT = True  # HTTPS 강제 리다이렉트
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+ALLOWED_HOSTS = ['api.gksf11.com']
 
 # Application definition
 INSTALLED_APPS = [
@@ -60,7 +58,6 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = True  # 개발용 (운영 시 특정 도메인만 허용 추천)
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://18.225.195.253.sslip.io",
     "https://api.gksf11.com"
 ]
 
