@@ -23,13 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-q*@mzwl46h8i@p7y0q)b71ik2%4xwjht)%kou11&jteng2ldhw"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # 배포 시 False로 변경 추천
 
-SECURE_SSL_REDIRECT = True  # HTTPS 강제 리다이렉트
+DEBUG = False
+SECURE_SSL_REDIRECT = False   # (리다이렉트는 Nginx에서 처리)
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-
 ALLOWED_HOSTS = ['api.gksf11.com']
+
 
 # Application definition
 INSTALLED_APPS = [
